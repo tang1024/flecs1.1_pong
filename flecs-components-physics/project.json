@@ -1,0 +1,13 @@
+{
+    "id":"flecs.components.physics",
+    "type":"package",
+    "value": {
+        "author": "Sander Mertens",
+        "description": "Physics components for flecs",
+        "use": [
+            "flecs",
+            "flecs.components.transform",
+            "flecs.components.geometry"
+        ]
+    }
+}

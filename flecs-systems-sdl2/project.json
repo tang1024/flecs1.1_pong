@@ -1,0 +1,18 @@
+{
+    "id":"flecs.systems.sdl2",
+    "type":"package",
+    "value": {
+        "author": "Sander Mertens",
+        "description": "SDL2 based renderer for flecs",
+        "use": [
+            "flecs",
+            "flecs.math",
+            "flecs.components.graphics",
+            "flecs.components.geometry",
+            "flecs.components.transform",
+            "flecs.components.input",
+            "flecs.systems.transform",
+            "bake.sdl2"
+        ]
+    }
+}

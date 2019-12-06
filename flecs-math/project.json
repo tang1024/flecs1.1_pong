@@ -1,0 +1,16 @@
+{
+    "id": "flecs.math",
+    "type": "package",
+    "value": {
+        "author": "Roberto Flores, Sander Mertens",
+        "description": "Math utilities for vectors and matrices"
+    },
+    "lang.c": {
+        "lib": ["m"]
+    },
+    "dependee": {
+        "lang.c": {
+            "lib": ["m"]
+        }
+    }
+}

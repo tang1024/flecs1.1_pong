@@ -1,0 +1,19 @@
+{
+    "id": "flecs.systems.physics",
+    "type": "package",
+    "value": {
+        "author": "Roberto Flores, Sander Mertens",
+        "description": "Physics systems for flecs",
+        "use": [
+            "flecs",
+            "flecs.math",
+            "flecs.components.transform",
+            "flecs.components.geometry",
+            "flecs.components.physics",
+            "flecs.systems.transform"
+        ]
+    },
+    "lang.c": {
+        "lib": ["m"]
+    }
+}
