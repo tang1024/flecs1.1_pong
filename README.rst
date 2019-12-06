@@ -2,7 +2,7 @@ vflecs
 ======
 Credit
 ------
-- `flecs <https://github.com/SanderMertens/flecs>`_.
+- `flecs <https://github.com/SanderMertens/flecs>`_
 - `Flecs Hub <https://github.com/flecs-hub>`_
 
 Feature
