@@ -1,5 +1,6 @@
-vflecs Documentation v0.1
-=========================
+************************
+flecs Documentation v0.1
+************************
 
 1. Programming Element
 ======================
@@ -188,10 +189,33 @@ If the application wants to share data between worlds, this has to be done manua
 
 .. code-block:: c
 
-    ecs_world_t *world = ecs_init();
+    ecs_world_t* ecs_init(void);
 
 A world in ECS can be created with the ecs_init function.
-   
+
+.. code-block:: c
+
+    ecs_world_t* ecs_init_w_args(
+        int argc,
+        char *argv[]);
+
+Create a new world with arguments.
+
+.. code-block:: c
+
+int ecs_fini(
+    ecs_world_t *world);
+
+This operation deletes the world, and all entities, components and systems within the world. 
+
+.. code-block:: c
+
+void ecs_quit(
+    ecs_world_t *world);
+    
+This operation signals that the application should quit. 
+It will cause ecs_progress to return false.
+
 4. Entity
 =========
 Entities are light-weight objects that represent "things" in the application.
@@ -626,6 +650,33 @@ can be imported with the ECS_IMPORT macro.
 
 - This will invoke the EcsComponentsTransform function, which will define the entities / components / systems. 
 - Furthermore, the macro will declare the variables to the entity / component / system handles to the local scope, so that they can be accessed by the code.
+
+.. code-block:: c
+
+    ecs_entity_t _ecs_import(
+        ecs_world_t *world,
+        ecs_module_init_action_t module,
+        const char *module_name,
+        int flags,
+        void *handles_out,
+        size_t handles_size);
+
+    #define ecs_import(world, module, flags, handles_out)\
+        _ecs_import(world, module##Import, #module, flags, handles_out, sizeof(module))
+ 
+Import a flecs module.
+
+.. code-block:: c
+
+    ecs_entity_t ecs_import_from_library(
+        ecs_world_t *world,
+        const char *library_name,
+        const char *module_name,
+        int flags);
+ 
+Import a module from a library. 
+If a module is stored in another library, 
+it can be dynamically loaded with this operation.
 
 APIs
 ====

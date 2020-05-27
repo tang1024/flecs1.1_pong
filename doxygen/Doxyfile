@@ -1,0 +1,115 @@
+#################################################
+# Project
+PROJECT_NAME           = "flecs1.1 pong"
+PROJECT_NUMBER         = "1.1"
+PROJECT_BRIEF          = ""
+
+#################################################
+# INPUT
+#################################################
+#USE_MDFILE_AS_MAINPAGE = README.md
+
+INPUT_ENCODING         = UTF-8
+
+INPUT                  = ../flecs-1.1 \
+                         ../flecs-components-geometry \
+                         ../flecs-components-graphics \
+                         ../flecs-components-input \
+                         ../flecs-components-physics \
+                         ../flecs-components-transform \
+                         ../flecs-math \
+                         ../flecs-systems-physics \
+                         ../flecs-systems-sdl2 \
+                         ../flecs-systems-transform \
+                         ../ecs_pong
+
+EXCLUDE                = 
+
+RECURSIVE              = YES
+FILE_PATTERNS          = *.c \
+                         *.cpp \
+                         *.h \
+                         *.inc \
+                         *.md
+
+#################################################
+# OUTPUT
+#################################################
+# Compile
+WARNINGS               = YES
+OPTIMIZE_OUTPUT_FOR_C  = YES
+
+# Source
+JAVADOC_AUTOBRIEF      = YES
+EXTRACT_STATIC         = YES
+EXTRACT_ALL            = YES
+
+SOURCE_BROWSER         = YES
+VERBATIM_HEADERS       = YES
+INLINE_SOURCES         = YES
+
+SHOW_USED_FILES        = NO
+
+# References
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+# Output
+SORT_MEMBER_DOCS       = NO
+SEPARATE_MEMBER_PAGES  = YES
+
+OUTPUT_DIRECTORY       = "./"
+CREATE_SUBDIRS         = YES
+GENERATE_LATEX         = NO
+
+#################################################
+# Graphs
+#################################################
+HAVE_DOT               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+
+DIRECTORY_GRAPH        = NO
+
+# References in Graph
+INCLUDE_GRAPH          = NO
+INCLUDED_BY_GRAPH      = NO
+
+# Limit the size of the various graphs.
+DOT_GRAPH_MAX_NODES    = 50
+MAX_DOT_GRAPH_DEPTH    = 0
+
+# Graph file format.
+DOT_IMAGE_FORMAT       = svg
+INTERACTIVE_SVG        = YES
+
+#################################################
+# Theme
+#################################################
+GENERATE_TREEVIEW      = YES
+HTML_COLORSTYLE_HUE    = 0
+HTML_COLORSTYLE_SAT    = 125
+HTML_COLORSTYLE_GAMMA  = 200
+
+#################################################
+# DEBUG
+#################################################
+#QUIET                  = YES
+#WARNINGS               = NO
+
+#################################################
+# Macro
+# doxygen -d Preprocessor > ./DBG.txt
+#################################################
+#INCLUDE_PATH           = ../flecs-1.1/include \
+#                         ../ecs_pong/include
+
+#ENABLE_PREPROCESSING   = YES
+#MACRO_EXPANSION        = YES
+#EXPAND_ONLY_PREDEF     = YES
+#PREDEFINED             = 
+#EXPAND_AS_DEFINED      = ECS_IMPORT
+#                         ECS_COMPONENT \
+#                         ECS_PREFAB \
+#                         ECS_ENTITY \
+#                         ECS_SYSTEM

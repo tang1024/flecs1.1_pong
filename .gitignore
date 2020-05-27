@@ -1,3 +1,5 @@
+html
+
 # directory
 backup
 
@@ -7,8 +9,10 @@ out
 
 target
 
-.vs/
-.git/
+cmake-build-debug
+.idea
+.vs
+.git
 
 # Prerequisites
 *.d

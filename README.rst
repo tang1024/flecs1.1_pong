@@ -1,17 +1,19 @@
-vflecs
-======
+*********
+flecs 1.1
+*********
+
 Credit
-------
+======
 - `flecs <https://github.com/SanderMertens/flecs>`_
 - `Flecs Hub <https://github.com/flecs-hub>`_
 
 Feature
--------
+=======
 - CMake
 - MSVC x64
 
 Static Build
-------------
+============
 .. code-block:: cmake
 
     ECS_PONG_STATIC
@@ -30,13 +32,13 @@ Static Build
     FLECS_SYSTEMS_PHYSICS_STATIC
 
 flecs_pong
-----------
+==========
 An implementation of pong in flecs, using . Tested on .
 
 .. image:: ./flecs_pong.png
 
 log
----
+===
 .. code-block:: c
 
     // Localize headers.
